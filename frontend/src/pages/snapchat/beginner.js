@@ -1,8 +1,8 @@
 import React from "react"
 import { FormattedMessage, Link, useIntl } from "gatsby-plugin-intl"
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+import Layout from "../../components/layout"
+import Image from "../../components/image"
+import SEO from "../../components/seo"
 
 const IndexPage = () => {
   const intl = useIntl()
@@ -16,7 +16,7 @@ const IndexPage = () => {
       <h1 className="mx-auto">
         <FormattedMessage id="hello" />
       </h1>
-      <p className="bg-red-400">
+      <p>
         <FormattedMessage id="welcome" />
       </p>
       <p>
