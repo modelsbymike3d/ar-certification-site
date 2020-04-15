@@ -1,33 +1,35 @@
 import React from "react"
-import { IntlContextConsumer, changeLocale } from "gatsby-plugin-intl"
+import { IntlContextConsumer, changeLocale, injectIntl } from "gatsby-plugin-intl"
 
 const languageName = {
-  en: "English",
-  ko: "한국어",
-  de: "Deutsch",
+  en: "English"
 }
 
-const Language = () => {
+function switchLanguage(event) {
+  changeLocale(event.target.value);
+}
+
+const Language = ({ currentLang }) => {
   return (
     <div>
+      <div className="relative">
+        
+      <select value={currentLang} onChange={switchLanguage} className="bg-green-700">
       <IntlContextConsumer>
+        
         {({ languages, language: currentLocale }) =>
           languages.map(language => (
-            <a
+            <option
               key={language}
-              onClick={() => changeLocale(language)}
-              style={{
-                color: currentLocale === language ? `yellow` : `white`,
-                margin: 10,
-                textDecoration: `underline`,
-                cursor: `pointer`,
-              }}
+              value={language}
             >
               {languageName[language]}
-            </a>
+            </option>
           ))
         }
       </IntlContextConsumer>
+      </select>
+    </div>
     </div>
   )
 }

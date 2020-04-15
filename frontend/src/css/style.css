@@ -1,5 +1,13 @@
 /*! purgecss start ignore */
 @tailwind base;
 @tailwind components;
+
+.site-shadow {
+  box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.4);
+}
+
+.site-shadow-reverse {
+  box-shadow: 0 -2px 5px 1px rgba(0, 0, 0, 0.4);
+}
 /*! purgecss end ignore */
 @tailwind utilities;
