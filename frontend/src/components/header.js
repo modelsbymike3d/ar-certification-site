@@ -4,7 +4,7 @@ import React from "react"
 import Language from "./language"
 
 const Header = ({ siteTitle, currentLang }) => (
-  <header className="bg-green-700 text-white p-4 site-shadow">
+  <header className="bg-green-700 text-white p-4 neu-border">
     <div className="flex flex-row justify-between items-center">
       <h1>
         <Link to="/" className="text-xl">
@@ -12,16 +12,16 @@ const Header = ({ siteTitle, currentLang }) => (
         </Link>
       </h1>
       <div className="flex flex-row justify-around">
-        <Language currentLang={currentLang} className="mx-4"/>
+        <Language currentLang={currentLang} className="mx-4" />
         {[
           {
             path: "/tracks",
-            text: "header.tracks"
+            text: "header.tracks",
           },
           {
             path: "/account",
-            text: "header.account"
-          }
+            text: "header.account",
+          },
         ].map((link, index) => (
           <Link to={link.path} key={index} className="mx-4">
             <FormattedMessage id={link.text} />
@@ -34,12 +34,12 @@ const Header = ({ siteTitle, currentLang }) => (
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
-  currentLang: PropTypes.string
+  currentLang: PropTypes.string,
 }
 
 Header.defaultProps = {
   siteTitle: ``,
-  currentLang: `en`
+  currentLang: `en`,
 }
 
 export default Header

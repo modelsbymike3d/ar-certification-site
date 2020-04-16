@@ -2,14 +2,12 @@ import { FormattedMessage, Link } from "gatsby-plugin-intl"
 import React from "react"
 
 const Footer = () => (
-    <footer className="w-full bg-green-700 text-white p-4 site-shadow-reverse">
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-          <FormattedMessage id=
-          'title' />
-        </footer>
-  
+  <footer className="w-full bg-green-700 text-white p-4 neu-border">
+    © {new Date().getFullYear()}, Built with
+    {` `}
+    <a href="https://www.gatsbyjs.org">Gatsby</a>
+    <FormattedMessage id="title" />
+  </footer>
 )
 
 export default Footer

@@ -2,6 +2,11 @@
 @tailwind base;
 @tailwind components;
 
+html {
+  background-color: #f7fafc;
+  font-family: "Nunito", sans-serif;
+}
+
 .site-shadow {
   box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.4);
 }
@@ -9,5 +14,28 @@
 .site-shadow-reverse {
   box-shadow: 0 -2px 5px 1px rgba(0, 0, 0, 0.4);
 }
+
+.text-neu {
+  text-shadow: 1px 1px 0px #cacacab7, 2px 2px 2px #838383d2;
+}
+
+.neu-border {
+  box-shadow: 2px 2px 5px #838383d2, -2px -2px 5px #ffffff,
+    inset -2px -2px 3px #cacacab7, inset 2px 2px 3px #b4b4b452;
+}
+
+.neu-inset {
+  box-shadow: inset 4px 4px 5px #272c32, inset -2px -2px 7px #818b9698;
+}
+
+.neu-border-button {
+  box-shadow: 3px 3px 5px #272c32, -1px -1px 5px #818b96c0,
+    inset -1px -1px 2px #3f485280, inset 1px 1px 2px #272c32;
+}
+
+.neu-border-button:active {
+  box-shadow: inset -3px -3px 5px #818b9680, inset 3px 3px 5px #272c32;
+}
+
 /*! purgecss end ignore */
 @tailwind utilities;

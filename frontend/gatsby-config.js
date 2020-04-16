@@ -55,6 +55,21 @@ module.exports = {
         purgeOnly: [`./src/css/style.css`],
       },
     },
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Nunito`,
+            subsets: [`latin`],
+            variants: ["400", "900"],
+          },
+          {
+            family: "Fredoka One",
+          },
+        ],
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

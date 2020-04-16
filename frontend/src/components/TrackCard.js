@@ -3,11 +3,13 @@ import React from "react"
 import PropTypes from "prop-types"
 
 const TrackCard = ({ software, platform, description, link }) => (
-  <div className="rounded shadow border-solid border-4 border-green-700">
-    <h1>{software}</h1>
-    <h2>{platform}</h2>
-    <p>{description}</p>
-    <Link to={link}>{`Start course!`}</Link>
+  <div className="neu-border">
+    <div className="m-4">
+      <h1 className="font-bold text-green-700 text-3xl text-neu">{software}</h1>
+      <h2 className="text-xl text-neu">{platform}</h2>
+      <p>{description}</p>
+      <Link to={link}>{`Start track!`}</Link>
+    </div>
   </div>
 )
 
