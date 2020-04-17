@@ -19,6 +19,11 @@ html {
   text-shadow: 1px 1px 0px #cacacab7, 2px 2px 2px #838383d2;
 }
 
+.neu-border-no-left {
+  box-shadow: 2px 2px 5px #838383d2, 0px -2px 5px #ffffff,
+    inset 0px -2px 3px #cacacab7, inset 2px 2px 3px #b4b4b452;
+}
+
 .neu-border {
   box-shadow: 2px 2px 5px #838383d2, -2px -2px 5px #ffffff,
     inset -2px -2px 3px #cacacab7, inset 2px 2px 3px #b4b4b452;

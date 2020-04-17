@@ -2,7 +2,9 @@ import React from "react"
 import { useIntl } from "gatsby-plugin-intl"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import TrackCard from "../components/TrackCard";
+import TrackCard from "../components/TrackCard"
+
+import LensStudio from "../images/lensstudio_logo.png"
 
 const TracksPage = () => {
   const intl = useIntl()
@@ -14,13 +16,15 @@ const TracksPage = () => {
         keywords={[`gatsby`, `application`, `react`]}
       />
       <div className="m-8">
-        <TrackCard 
-            software={intl.formatMessage({ id: "track.lensstudio.software"})} 
-            platform={intl.formatMessage({ id: "track.lensstudio.platform"})} 
-            description={intl.formatMessage({ id: "track.lensstudio.description"})}
-            link={"/lensstudio"}
+        <TrackCard
+          software={intl.formatMessage({ id: "track.lensstudio.software" })}
+          platform={intl.formatMessage({ id: "track.lensstudio.platform" })}
+          description={intl.formatMessage({
+            id: "track.lensstudio.description",
+          })}
+          link={"/lensstudio"}
+          image={LensStudio}
         />
-
       </div>
     </Layout>
   )
