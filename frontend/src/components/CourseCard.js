@@ -3,13 +3,15 @@ import React from "react"
 import PropTypes from "prop-types"
 
 const CourseCard = ({ title, description, link, image, difficulty }) => (
-  <div className="mb-4">
+  <div className=" max-w-sm h-56 mx-auto my-4">
     <div
-      className=" neu-border bg-grey-100 max-w-sm h-56 mx-auto"
+      className="bg-grey-100 max-w-sm h-56 neu-border"
       style={{
         backgroundImage: `url(${image})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
+        backgroundSize: "100% 100%",
+        backgroundRepeat: "no-repeat",
       }}
     >
       <div className="h-20"></div>
