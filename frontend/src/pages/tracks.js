@@ -22,7 +22,7 @@ const TracksPage = () => {
           description={intl.formatMessage({
             id: "track.lensstudio.description",
           })}
-          link={"/lensstudio"}
+          link={"/tracks/lens-studio"}
           image={LensStudio}
         />
       </div>

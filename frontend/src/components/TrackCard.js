@@ -4,9 +4,9 @@ import PropTypes from "prop-types"
 
 const TrackCard = ({ software, platform, description, link, image }) => (
   <div className="neu-border">
-    <div className=" flex flex-row items-center bg-green-700">
-      <div className="relative h-full p-2">
-        <div className="bg-white rounded-full">
+    <div className=" flex flex-row items-center bg-grey-100">
+      <div className="relative h-full p-2 flex flex-col">
+        <div className="bg-white rounded-full neu-border">
           <img
             className="w-24 rounded-full border-0 border-solid border-green-700"
             src={image}
@@ -14,7 +14,7 @@ const TrackCard = ({ software, platform, description, link, image }) => (
           />
         </div>
       </div>
-      <div className="pl-4 bg-gray-100">
+      <div className="pl-4">
         <div>
           <h1 className="font-bold text-green-700 text-3xl text-neu">
             {software}
@@ -23,7 +23,10 @@ const TrackCard = ({ software, platform, description, link, image }) => (
             {platform}
           </h2>
           <p>{description}</p>
-          <Link to={link}>{`Start track!`}</Link>
+          <Link
+            to={link}
+            className="text-green-700 font-bold"
+          >{`Start track!`}</Link>
         </div>
       </div>
     </div>

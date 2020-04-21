@@ -1,8 +1,8 @@
 import React from "react"
 import { FormattedMessage, Link, useIntl } from "gatsby-plugin-intl"
-import Layout from "../../components/layout"
-import Image from "../../components/image"
-import SEO from "../../components/seo"
+import Layout from "../../../components/layout"
+import Image from "../../../components/image"
+import SEO from "../../../components/seo"
 
 const IndexPage = () => {
   const intl = useIntl()
@@ -13,19 +13,20 @@ const IndexPage = () => {
         title={intl.formatMessage({ id: "title" })}
         keywords={[`gatsby`, `application`, `react`]}
       />
-      <h1>
+      <h1 className="mx-auto">
         <FormattedMessage id="hello" />
       </h1>
       <p>
         <FormattedMessage id="welcome" />
+        LS Beginner page
       </p>
       <p>
-        <FormattedMessage id="welcome" />
+        <FormattedMessage id="build" />
       </p>
       <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
         <Image />
       </div>
-      <Link to="/snapchat/beginner/">
+      <Link to="/page-2/">
         <FormattedMessage id="go_page2" />
       </Link>
     </Layout>
