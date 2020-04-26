@@ -5,8 +5,9 @@ import SEO from "../../components/seo"
 
 import CourseCard from "../../components/CourseCard"
 
-const TracksPage = () => {
+const LensStudio = () => {
   const intl = useIntl()
+  const basePath = `/tracks/lensstudio`
   return (
     <Layout>
       <SEO
@@ -17,10 +18,10 @@ const TracksPage = () => {
       <div className="mt-8 mx-2 flex flex-col justify-between">
         {[
           {
-            title: "Face Effects",
+            title: "Getting Started",
             description:
-              "Learn how to use retouch, liquify, distort, and face images to create fun face effects!",
-            link: "/",
+              "Get started by downloading and installing Lens Studio.",
+            link: `${basePath}/getting-started`,
             image: "../../images/en/lensstudio/mountain.jpg",
             difficulty: "Beginner",
           },
@@ -48,4 +49,4 @@ const TracksPage = () => {
   )
 }
 
-export default TracksPage
+export default LensStudio
