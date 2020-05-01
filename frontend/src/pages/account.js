@@ -1,10 +1,11 @@
 import React from "react"
-import { FormattedMessage, injectIntl, navigate } from "gatsby-plugin-intl"
+import { FormattedMessage, navigate } from "gatsby-plugin-intl"
+import { withAuthenticator } from "aws-amplify-react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const SecondPage = ({ intl }) => (
+const Account = ({ intl }) => (
   <Layout>
     <SEO lang={intl.locale} title={intl.formatMessage({ id: "title_page2" })} />
     <h1>
@@ -25,4 +26,4 @@ const SecondPage = ({ intl }) => (
   </Layout>
 )
 
-export default injectIntl(SecondPage)
+export default withAuthenticator(Account)

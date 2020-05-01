@@ -1,0 +1,31 @@
+service: arcert
+
+plugins:
+  - serverless-offline
+
+provider:
+  name: aws
+  runtime: nodejs10.x
+  stage: ${opt:stage, 'dev'}
+  profile: arcert
+  iamRoleStatements:
+    - Effect: "Allow"
+      Action:
+        - "ses:SendEmail"
+        - logs:CreateLogGroup
+        - logs:CreateLogStream
+        - logs:PutLogEvents
+      Resource: ["*"]
+  environment:
+    TEST: SomeVal
+    EMAIL: ${file(./config.${self:provider.stage}.json):email}
+
+functions:
+  hello:
+    handler: handler.hello
+    memorySize: 128
+    events:
+      - http:
+          path: path
+          method: post
+          cors: true
