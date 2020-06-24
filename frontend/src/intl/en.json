@@ -2,7 +2,8 @@
   "header": {
     "title": "AR Bootcamp",
     "tracks": "Tracks",
-    "account": "Account"
+    "account": "Account",
+    "login": "Login"
   },
   "track": {
     "lensstudio": {

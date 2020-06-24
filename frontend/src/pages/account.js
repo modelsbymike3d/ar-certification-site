@@ -1,7 +1,5 @@
 import React from "react"
-import { FormattedMessage, navigate } from "gatsby-plugin-intl"
-import { withAuthenticator } from "aws-amplify-react"
-
+import { injectIntl, FormattedMessage, navigate } from "gatsby-plugin-intl"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
@@ -26,4 +24,4 @@ const Account = ({ intl }) => (
   </Layout>
 )
 
-export default withAuthenticator(Account)
+export default injectIntl(Account)
